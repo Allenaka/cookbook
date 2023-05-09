@@ -1,0 +1,27 @@
+{
+  "name": "cookbook",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "dependencies": {
+    "@astrojs/vue": "^2.1.1",
+    "astro": "^2.3.2",
+    "openai": "^3.2.1",
+    "prism-theme-vars": "^0.2.4",
+    "vue": "^3.2.30"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.38.5",
+    "@unocss/reset": "^0.51.8",
+    "eslint": "^8.39.0",
+    "unocss": "^0.51.8"
+  }
+}

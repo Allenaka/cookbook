@@ -1,0 +1,19 @@
+---
+import Layout from '../layouts/Layout.astro';
+import MainContent from '../components/mainContent/mainContent.vue';
+import Footer from '../components/footer/footer.vue';
+---
+
+<Layout title="Welcome to Astro.">
+	<main>
+		<MainContent client:load></MainContent>
+    <Footer />
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1.5rem;
+	}
+</style>
