@@ -13,6 +13,8 @@ const API_KEY = import.meta.env.APP_KEY
 
 const { startLoading, stopLoading } = useLoading()
 
+const content = import.meta.env.CHAT_CONTENT.replace(/\$\{(.*?)\}/, [...currFoods.values()].join('、'))
+
 async function fetchData() {
   startLoading()
   const response = await fetch('https://api.openai.com/v1/chat/completions', {
@@ -24,8 +26,8 @@ async function fetchData() {
     body: JSON.stringify({
       model: 'gpt-3.5-turbo',
       messages: [{
-        role: 'user', content: `你是一名中国民间大厨，请用${[...currFoods.values()].join('、')}做几道菜，
-      返回给我菜名的js数组, 数组长度不小于10`,
+        role: 'user',
+        content,
       }],
     }),
   })
